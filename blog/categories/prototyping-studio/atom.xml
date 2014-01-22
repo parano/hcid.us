@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Thinking in Design]]></title>
-  <link href="http://hcid.us/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Prototyping Studio | Thinking in Design]]></title>
+  <link href="http://hcid.us/blog/categories/prototyping-studio/atom.xml" rel="self"/>
   <link href="http://hcid.us/"/>
   <updated>2014-01-21T20:49:17-08:00</updated>
   <id>http://hcid.us/</id>
@@ -20,7 +20,7 @@
     <id>http://hcid.us/blog/2014/01/21/paper-prototype-assignment-wearable-uis</id>
     <content type="html"><![CDATA[<h2>Design</h2>
 
-<p><img class="right" src="http://hcid.us/images/prototyping/a1/metronome.jpg" width="160">
+<p><img class="right" src="/images/prototyping/a1/metronome.jpg" width="160">
 For this paper prototype assignment, I designed a metronome application that works on both mobile phone and smart watch. It helps to improve musical performance like a traditional metronome while wearable device enabled us to create an even better user experience.</p>
 
 <p>In the picture is a mechanical wind-up metronome which can produce a steady beats: “Da Da Da Da &hellip;”. The consistent tempo help internalizing a clear sense of timing and tempo while musician is playing. By adjusting the metronome, the device can produce varying tempi, usually ranging from 40 to 208 BPM(Beats Per Minutes).</p>
@@ -29,7 +29,7 @@ For this paper prototype assignment, I designed a metronome application that wor
 
 <p>One thing I found most excited about using Pebble is vibrating on wrist. It enabled a new dimension of sensing information from a digital device without actively paying attention to the device. My idea is by setting the smartwatch to vibrate in a certain tempo, to give musician a more strong sense of the beats.</p>
 
-<p><img class="left" src="http://hcid.us/images/prototyping/a1/sketch.jpg" width="320"></p>
+<p><img class="left" src="/images/prototyping/a1/sketch.jpg" width="320"></p>
 
 <p>I sketched my first design on whiteboard. It uses the mobile phone interface to set the tempo, while user can also adjust the tempo directly from the watch.</p>
 
@@ -42,8 +42,8 @@ The wheel is easy to understand, it’s like a metaphor of physical tuner. But I
 
 <p>I made a watch face and attach it to a Pebble watch so that the user can actually wear the watch and try the interactions in a more realistic setting. Once the user click start on the phone, the smart watch will launch this app which allow the user to adjust the tempo by the “up/down” button, and exit the app through the “Home” button.</p>
 
-<p><img class="left" src="http://hcid.us/images/prototyping/a1/p1.1.jpg" width="320">
-<img src="http://hcid.us/images/prototyping/a1/p1.2.jpg" width="320"></p>
+<p><img class="left" src="/images/prototyping/a1/p1.1.jpg" width="320">
+<img src="/images/prototyping/a1/p1.2.jpg" width="320"></p>
 
 <p>As some effects can’t be implemented with paper prototype, I will just tell them what happens on the interface or the devices. That includes slight changes on the BPM number, the vibrating of the watch, the sound tempo make by the phone, and the backlight feedback for clicking the tap button.</p>
 
@@ -51,8 +51,8 @@ The wheel is easy to understand, it’s like a metaphor of physical tuner. But I
 
 <p>With the second paper prototype, I use cardboard to create a base in the shape of an iPhone so that the user can actually hold the phone on hand. I use a scrolling bar to change the BPM value so that the feedback from tapping and wheel could be faster in the testing. And the scrolling up and down actually simulate the animation I want for this interface. While the user is adjusting the wheel, I will scroll the bar up or down according to the user’s operation. In the first time the user touch the “Tap” button, a pop-up dialog will show up to tell the user how to use this button.</p>
 
-<p><img class="left" src="http://hcid.us/images/prototyping/a1/p2.1.jpg" width="320">
-<img src="http://hcid.us/images/prototyping/a1/p2.2.jpg" width="320"></p>
+<p><img class="left" src="/images/prototyping/a1/p2.1.jpg" width="320">
+<img src="/images/prototyping/a1/p2.2.jpg" width="320"></p>
 
 <h2>Testing &amp; Analysis</h2>
 
@@ -80,7 +80,7 @@ The wheel is easy to understand, it’s like a metaphor of physical tuner. But I
     <link href="http://hcid.us/blog/2014/01/21/paper-prototype-exercise-coffee-ordering-tablet-app/"/>
     <updated>2014-01-21T17:49:01-08:00</updated>
     <id>http://hcid.us/blog/2014/01/21/paper-prototype-exercise-coffee-ordering-tablet-app</id>
-    <content type="html"><![CDATA[<p><img class="right" src="http://hcid.us/images/prototyping/e1/overview.jpg" width="320"></p>
+    <content type="html"><![CDATA[<p><img class="right" src="/images/prototyping/e1/overview.jpg" width="320"></p>
 
 <p>In the first week of our prototyping class, we explored paper prototyping through a quick exercise: to design a simple coffee ordering tablet app that allowed users to order three different types of coffee in three different sizes.</p>
 
@@ -89,7 +89,7 @@ The wheel is easy to understand, it’s like a metaphor of physical tuner. But I
 <p>We started with sketching out our ideas for the UI independently and then gathered to critique and discuss different approaches. Then we quickly build our first paper prototype, and test it with any people around that are available.
 The usability testing and the feedbacks from the users helped us to find some design flaws. After multiple iterations, we made a lot of improvements to our initial design and the finalized an easy-to-use coffee order app prototype.</p>
 
-<p><img src="http://hcid.us/images/prototyping/e1/1.jpg" width="160"><img src="http://hcid.us/images/prototyping/e1/2.jpg" width="160"><img src="http://hcid.us/images/prototyping/e1/3.jpg" width="160"><img src="http://hcid.us/images/prototyping/e1/4.jpg" width="160"><img src="http://hcid.us/images/prototyping/e1/5.jpg" width="160"></p>
+<p><img src="/images/prototyping/e1/1.jpg" width="160"><img src="/images/prototyping/e1/2.jpg" width="160"><img src="/images/prototyping/e1/3.jpg" width="160"><img src="/images/prototyping/e1/4.jpg" width="160"><img src="/images/prototyping/e1/5.jpg" width="160"></p>
 ]]></content>
   </entry>
   

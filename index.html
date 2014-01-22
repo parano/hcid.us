@@ -7,8 +7,7 @@
 	<meta name="author" content="Chaoyu Yang">
 
 	
-	<meta name="description" content=" Blog Archives
-">
+	<meta name="description" content="Design For this paper prototype assignment, I designed a metronome application that works on both mobile phone and smart watch. It helps to improve &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -52,6 +51,8 @@
 	<div class="social">
 		
 		
+		<a class="google" href="https://plus.google.com/ChaoyuYang?rel=author" title="Google+">Google+</a>
+		
 		
 		<a class="twitter" href="http://twitter.com/paranoyang" title="Twitter">Twitter</a>
 		
@@ -80,6 +81,154 @@
 	
 	<div id="content" class="inner">
 
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/01/21/paper-prototype-assignment-wearable-uis/">
+		
+			Paper Prototype Assignment: Wearable UIs</a>
+	</h2>
+	<div class="entry-content">
+		<h2>Design</h2>
+
+<p><img class="right" src="/images/prototyping/a1/metronome.jpg" width="160">
+For this paper prototype assignment, I designed a metronome application that works on both mobile phone and smart watch. It helps to improve musical performance like a traditional metronome while wearable device enabled us to create an even better user experience.</p>
+
+<p>In the picture is a mechanical wind-up metronome which can produce a steady beats: “Da Da Da Da &hellip;”. The consistent tempo help internalizing a clear sense of timing and tempo while musician is playing. By adjusting the metronome, the device can produce varying tempi, usually ranging from 40 to 208 BPM(Beats Per Minutes).</p>
+
+<p>Existing software metronomes and electronic metronomes usually produce the tempo by sound. The problem with using sound is that the sound may be interruptive for audience, and it’s hard to follow the sound on stage(noisy environment).</p>
+
+<p>One thing I found most excited about using Pebble is vibrating on wrist. It enabled a new dimension of sensing information from a digital device without actively paying attention to the device. My idea is by setting the smartwatch to vibrate in a certain tempo, to give musician a more strong sense of the beats.</p>
+
+<p><img class="left" src="/images/prototyping/a1/sketch.jpg" width="320"></p>
+
+<p>I sketched my first design on whiteboard. It uses the mobile phone interface to set the tempo, while user can also adjust the tempo directly from the watch.</p>
+
+<p>There are two ways to change the BPM value from the phone. One is by spinning the wheel in the middle of the screen, and the other one is by continuously tapping on the button to give an approximate speed. The first method is more accurate and the second one is more intuitive and more useful for composers.
+The wheel is easy to understand, it’s like a metaphor of physical tuner. But I’m not sure about the “tapping” part. So I start to make a paper prototype and test this design.</p>
+
+<h2>Prototype</h2>
+
+<p>I build the first version of this prototype within 10 minutes. It’s a quick and dirty one, with only the necessary components on one white paper. To operate this prototype, I need to change the BPM value by writing on a small sticky note and change it while the user using the prototype.</p>
+
+<p>I made a watch face and attach it to a Pebble watch so that the user can actually wear the watch and try the interactions in a more realistic setting. Once the user click start on the phone, the smart watch will launch this app which allow the user to adjust the tempo by the “up/down” button, and exit the app through the “Home” button.</p>
+
+<p><img class="left" src="/images/prototyping/a1/p1.1.jpg" width="320">
+<img src="/images/prototyping/a1/p1.2.jpg" width="320"></p>
+
+<p>As some effects can’t be implemented with paper prototype, I will just tell them what happens on the interface or the devices. That includes slight changes on the BPM number, the vibrating of the watch, the sound tempo make by the phone, and the backlight feedback for clicking the tap button.</p>
+
+<p>After several tests, I build a second version based on the feedbacks from the tests with the first paper prototype.</p>
+
+<p>With the second paper prototype, I use cardboard to create a base in the shape of an iPhone so that the user can actually hold the phone on hand. I use a scrolling bar to change the BPM value so that the feedback from tapping and wheel could be faster in the testing. And the scrolling up and down actually simulate the animation I want for this interface. While the user is adjusting the wheel, I will scroll the bar up or down according to the user’s operation. In the first time the user touch the “Tap” button, a pop-up dialog will show up to tell the user how to use this button.</p>
+
+<p><img class="left" src="/images/prototyping/a1/p2.1.jpg" width="320">
+<img src="/images/prototyping/a1/p2.2.jpg" width="320"></p>
+
+<h2>Testing &amp; Analysis</h2>
+
+<p>This is a minute clip presenting the usability testing for the 2 iterations of my paper prototype:</p>
+
+<div class="video-container">
+<iframe src="//player.vimeo.com/video/84655291" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+<p>During the tests with the first prototype, I found that the text “Try tap your tempo” on the left side is extremely helpful for the user to understand how to use it. I tried to remove it and test it with another user, and it failed in the tapping part. The user can’t understand how to use the Tap button without this simple instruction. But I also noticed that this text instruction is unnecessary after the user figure out how to use it. So I change it to a dialog format.</p>
+
+<p>On the other hand, spinning the wheel is more like a self explaining UI component, user can easily figure out how to use it. That may because it looks just like a rotary knob, and it’s natural for it to change the number above it. And this metaphor is widely used in many software interface for turning volume, adjusting parameters and also hardwares such as the classic iPod.</p>
+
+<p>I found that changing the number instantly (or faster) will largely help the user to understand the UI, and replacing the sticky notes is too time-consuming in the test. That’s why I use a scrolling bar for changing the BPM value in the improved version, as it’s just an increasing array of numbers.</p>
+
+<p>Another problem I found in the testing is that user barely use the interface on smartwatch to adjust the tempo. Most of the time they just use the mobile phone to adjust the tempo and to start/stop the beats, although most of them like the idea of vibrating on smartwatch. On a second thought, this app can totally work without the mobile phone: adjusting one number is easy enough to operate on a watch with a simple interface like the one I designed. Moreover if the smartwatch have a motion sensor and microphone, it’s possible to ask the user to set the tempo by snapping their finger which is even more fun to use.</p>
+
+<p>Beside adjusting the tempo, the phone actually allow us to do more complicate operations. For example, the user can choose a song from the music library and let the watch vibrate in a rhythmic beats, or use the phone to connect and sync the tempo among multiple smart watches, which may be useful for a band to collaborate.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-21T17:49:25-08:00" pubdate data-updated="true">Jan 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/hcid/'>HCID</a>, <a class='category' href='/blog/categories/prototyping-studio/'>Prototyping Studio</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/01/21/paper-prototype-assignment-wearable-uis/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2014/01/21/paper-prototype-exercise-coffee-ordering-tablet-app/">
+		
+			Paper Prototype Exercise: Coffee Ordering Tablet App</a>
+	</h2>
+	<div class="entry-content">
+		<p><img class="right" src="/images/prototyping/e1/overview.jpg" width="320"></p>
+
+<p>In the first week of our prototyping class, we explored paper prototyping through a quick exercise: to design a simple coffee ordering tablet app that allowed users to order three different types of coffee in three different sizes.</p>
+
+<p>We have to make a paper prototype of our design very quickly and then test the paper prototype with users and evaluate the design.</p>
+
+<p>We started with sketching out our ideas for the UI independently and then gathered to critique and discuss different approaches. Then we quickly build our first paper prototype, and test it with any people around that are available.
+The usability testing and the feedbacks from the users helped us to find some design flaws. After multiple iterations, we made a lot of improvements to our initial design and the finalized an easy-to-use coffee order app prototype.</p>
+
+<p><img src="/images/prototyping/e1/1.jpg" width="160"><img src="/images/prototyping/e1/2.jpg" width="160"><img src="/images/prototyping/e1/3.jpg" width="160"><img src="/images/prototyping/e1/4.jpg" width="160"><img src="/images/prototyping/e1/5.jpg" width="160"></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-21T17:49:01-08:00" pubdate data-updated="true">Jan 21<span>st</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/prototyping-studio/'>Prototyping Studio</a>
+
+
+</div>
+	
+	<div class="comments"><a href="/blog/2014/01/21/paper-prototype-exercise-coffee-ordering-tablet-app/#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
 <nav id="pagenavi">
     
     
@@ -99,7 +248,32 @@
 </script> <!-- Delete or comment this line to disable Fancybox -->
 
 
+<script type="text/javascript">
+      var disqus_shortname = 'hcidus';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', '45122468']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 
 
 
