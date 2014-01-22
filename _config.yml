@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://parano.github.io/hcid
+url: http://hcid.us
 title: Thinking in Design
 subtitle: 
 author: Chaoyu Yang
@@ -16,20 +16,20 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /hcid/atom.xml
+subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: paranoyang@gmail.com
+email: 
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /hcid
+root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public/hcid
+destination: public/
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
