@@ -57,8 +57,6 @@ This is a minute clip presenting the usability testing for the 2 iterations of m
 <iframe src="//player.vimeo.com/video/84655291" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
-
-
 During the tests with the first prototype, I found that the text “Try tap your tempo” on the left side is extremely helpful for the user to understand how to use it. I tried to remove it and test it with another user, and it failed in the tapping part. The user can’t understand how to use the Tap button without this simple instruction. But I also noticed that this text instruction is unnecessary after the user figure out how to use it. So I change it to a dialog format.
 
 On the other hand, spinning the wheel is more like a self explaining UI component, user can easily figure out how to use it. That may because it looks just like a rotary knob, and it’s natural for it to change the number above it. And this metaphor is widely used in many software interface for turning volume, adjusting parameters and also hardwares such as the classic iPod.
