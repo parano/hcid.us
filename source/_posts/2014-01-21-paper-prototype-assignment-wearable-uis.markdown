@@ -19,6 +19,7 @@ Existing software metronomes and electronic metronomes usually produce the tempo
 
 One thing I found most excited about using Pebble is vibrating on wrist. It enabled a new dimension of sensing information from a digital device without actively paying attention to the device. My idea is by setting the smartwatch to vibrate in a certain tempo, to give musician a more strong sense of the beats. 
 
+<!-- more -->
 
 {% img left /images/prototyping/a1/sketch.JPG 320 %} 
 
