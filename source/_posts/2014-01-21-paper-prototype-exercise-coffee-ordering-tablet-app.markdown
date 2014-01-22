@@ -7,7 +7,7 @@ categories: [Prototyping Studio]
 ---
 
 
-{% img right /images/prototyping/e1/overview.jpg 320 %} 
+{% img right /images/prototyping/e1/overview.JPG 320 %} 
 
 In the first week of our prototyping class, we explored paper prototyping through a quick exercise: to design a simple coffee ordering tablet app that allowed users to order three different types of coffee in three different sizes.
 

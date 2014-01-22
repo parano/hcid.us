@@ -20,7 +20,7 @@ Existing software metronomes and electronic metronomes usually produce the tempo
 One thing I found most excited about using Pebble is vibrating on wrist. It enabled a new dimension of sensing information from a digital device without actively paying attention to the device. My idea is by setting the smartwatch to vibrate in a certain tempo, to give musician a more strong sense of the beats. 
 
 
-{% img left /images/prototyping/a1/sketch.jpg 320 %} 
+{% img left /images/prototyping/a1/sketch.JPG 320 %} 
 
 I sketched my first design on whiteboard. It uses the mobile phone interface to set the tempo, while user can also adjust the tempo directly from the watch.
 
@@ -45,7 +45,7 @@ After several tests, I build a second version based on the feedbacks from the te
 
 With the second paper prototype, I use cardboard to create a base in the shape of an iPhone so that the user can actually hold the phone on hand. I use a scrolling bar to change the BPM value so that the feedback from tapping and wheel could be faster in the testing. And the scrolling up and down actually simulate the animation I want for this interface. While the user is adjusting the wheel, I will scroll the bar up or down according to the user’s operation. In the first time the user touch the “Tap” button, a pop-up dialog will show up to tell the user how to use this button.
 
-{% img left /images/prototyping/a1/p2.1.jpg 320 %} 
+{% img left /images/prototyping/a1/p2.1.JPG 320 %} 
 {% img /images/prototyping/a1/p2.2.jpg 320 %} 
 
 
