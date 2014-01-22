@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://parano.github.io/hcid/blog/archives/</loc>
-        <lastmod>2014-01-21T16:02:33-08:00</lastmod>
+        <loc>http://hcid.us/blog/archives/</loc>
+        <lastmod>2014-01-21T16:55:36-08:00</lastmod>
     </url>
     <url>
-        <loc>http://parano.github.io/hcid/</loc>
-        <lastmod>2014-01-21T16:02:33-08:00</lastmod>
+        <loc>http://hcid.us/</loc>
+        <lastmod>2014-01-21T16:55:36-08:00</lastmod>
     </url>
     <url>
-        <loc>http://parano.github.io/hcid/robots.txt</loc>
+        <loc>http://hcid.us/robots.txt</loc>
         <lastmod>2014-01-21T16:01:27-08:00</lastmod>
     </url>
 </urlset>

@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://parano.github.io/hcid/sitemap.xml 
+Sitemap: http://hcid.us/sitemap.xml 

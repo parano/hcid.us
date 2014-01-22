@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Thinking in Design]]></title>
-  <link href="http://parano.github.io/hcid/atom.xml" rel="self"/>
-  <link href="http://parano.github.io/hcid/"/>
-  <updated>2014-01-21T16:43:43-08:00</updated>
-  <id>http://parano.github.io/hcid/</id>
+  <link href="http://hcid.us/atom.xml" rel="self"/>
+  <link href="http://hcid.us/"/>
+  <updated>2014-01-21T17:02:39-08:00</updated>
+  <id>http://hcid.us/</id>
   <author>
     <name><![CDATA[Chaoyu Yang]]></name>
-    <email><![CDATA[paranoyang@gmail.com]]></email>
+    
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
