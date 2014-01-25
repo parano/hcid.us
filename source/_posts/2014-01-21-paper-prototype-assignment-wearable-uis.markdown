@@ -55,7 +55,7 @@ Testing & Analysis
 This is a minute clip presenting the usability testing for the 2 iterations of my paper prototype:
 
 <div class="video-container">
-<iframe src="//player.vimeo.com/video/84655291" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+<iframe src="//player.vimeo.com/video/84655291" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
 During the tests with the first prototype, I found that the text “Try tap your tempo” on the left side is extremely helpful for the user to understand how to use it. I tried to remove it and test it with another user, and it failed in the tapping part. The user can’t understand how to use the Tap button without this simple instruction. But I also noticed that this text instruction is unnecessary after the user figure out how to use it. So I change it to a dialog format.
