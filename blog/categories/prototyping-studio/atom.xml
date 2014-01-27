@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Prototyping Studio | Thinking in Design]]></title>
   <link href="http://hcid.us/blog/categories/prototyping-studio/atom.xml" rel="self"/>
   <link href="http://hcid.us/"/>
-  <updated>2014-01-22T02:39:30-08:00</updated>
+  <updated>2014-01-26T16:24:11-08:00</updated>
   <id>http://hcid.us/</id>
   <author>
     <name><![CDATA[Chaoyu Yang]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Model Prototyping Exercise: ecoATM]]></title>
-    <link href="http://hcid.us/blog/2014/01/21/model-prototyping-exercise-ecoatm/"/>
+    <title type="html"><![CDATA[Model Prototype Exercise: ecoATM]]></title>
+    <link href="http://hcid.us/blog/2014/01/21/model-prototype-exercise-ecoatm/"/>
     <updated>2014-01-21T22:42:27-08:00</updated>
-    <id>http://hcid.us/blog/2014/01/21/model-prototyping-exercise-ecoatm</id>
+    <id>http://hcid.us/blog/2014/01/21/model-prototype-exercise-ecoatm</id>
     <content type="html"><![CDATA[<div class="video-container">
 <iframe src="http://hcid.us//player.vimeo.com/video/84655899" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
@@ -76,7 +76,7 @@ The wheel is easy to understand, it’s like a metaphor of physical tuner. But I
 <p>This is a minute clip presenting the usability testing for the 2 iterations of my paper prototype:</p>
 
 <div class="video-container">
-<iframe src="http://hcid.us//player.vimeo.com/video/84655291" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+<iframe src="http://hcid.us//player.vimeo.com/video/84655291" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
 

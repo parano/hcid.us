@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCID | Thinking in Design]]></title>
   <link href="http://hcid.us/blog/categories/hcid/atom.xml" rel="self"/>
   <link href="http://hcid.us/"/>
-  <updated>2014-01-22T02:39:30-08:00</updated>
+  <updated>2014-01-26T16:24:11-08:00</updated>
   <id>http://hcid.us/</id>
   <author>
     <name><![CDATA[Chaoyu Yang]]></name>
@@ -62,7 +62,7 @@ The wheel is easy to understand, it’s like a metaphor of physical tuner. But I
 <p>This is a minute clip presenting the usability testing for the 2 iterations of my paper prototype:</p>
 
 <div class="video-container">
-<iframe src="http://hcid.us//player.vimeo.com/video/84655291" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+<iframe src="http://hcid.us//player.vimeo.com/video/84655291" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
 
