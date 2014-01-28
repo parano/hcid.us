@@ -17,9 +17,12 @@ Another challenge for me is that I have never use both equipments in my life bef
 
 ##Design
 
+
+{% img right /images/prototyping/a2/exploration.png 300 %}
+
 The [OXO](http://www.oxo.com/) brand is known for applying universal design to deliver well-designed, easy to use tools for cooking and food preparation. I started with thinking about how to make a handheld blender that can work with different size of hands, and what kind of shape can achieve this goal. So I started to do some sketch like this:
 
-{% img left /images/prototyping/a2/catchup.png 140 %}
+
 
 Sketching is an effective way to think with paper, but to design a physical object, it’s much better to think with our hands. So I turned to hold different objects such as water bottle, catch-up bottle, or folding umbrella, and try to use it as an immersion blender. And also by wrapping some tinfoil on the outside of those objects, I can change the shape easily and explore more opportunities within a very short period of time.
 
@@ -33,7 +36,9 @@ The first model is in the shape of a drill. It have two button on the shank to o
 {% img /images/prototyping/a2/model1-sketch.png 256 %}{% img /images/prototyping/a2/model1.jpg 256 %}{% img /images/prototyping/a2/model1.gif 288 %} 
 
 ##Model 2
-I design this model based on the idea of catch-up bottle. When using a handheld blender, we always need to move the blender up and down. And it’s important to let user hold the device tightly because of the potential danger when the motor is working. I found the shape of a collapsed catch-up bottle feels good for a blender, so I make the handgrip in this shape and but the switches on the position of the thumb.
+
+{% img left /images/prototyping/a2/catchup.png 170 %}
+I design this model based on the idea of catch-up bottle. When using a handheld blender, we always need to move the blender up and down. And it’s important to let user hold the device tightly because of the potential danger when the motor is working. I found the shape of a collapsed catch-up bottle feels good for a blender, so I make the handgrip in this shape and put the switches on the position of the thumb.
 
 The whole body was made of clay and wrapped it with tape. The whisk part is made of a wood stick and some foam wrapped with tinfoil.
 
@@ -56,7 +61,7 @@ Here is an one minute clip of the usability testing with these three model proto
 <iframe src="//player.vimeo.com/video/84949884" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
-#Reflection
+##Reflection
 When designing physical device, it’s easier to think with our hands to see what works. Even holding a simple object can help with designing the shape. And with a little effort, you can try out many different approaches in a second which help me to narrow down my choices rapidly.
 
 I found that Lo-fi 3d prototype provide a more concrete context for interaction designers to think about the interaction with a physical object. And it’s also a good practice to think human computer interaction in a manner of human factors and ergonomics.
