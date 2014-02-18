@@ -1,0 +1,284 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Website Prototype: dub Site Redesign - Adventures in HCI+D</title>
+	<meta name="author" content="Chaoyu Yang">
+
+	
+	<meta name="description" content="Background Our weekly prototyping assignments started with low fidelity prototyping to higher fidelity ones. This week we are proposed to build an &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Adventures in HCI+D" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Adventures in HCI+D</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/about">About</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/about">About</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:hcid.us">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/paranoyang" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/parano" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:hcid.us">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Website Prototype: Dub Site Redesign</h2>
+	<div class="entry-content"><h2>Background</h2>
+
+<p>Our weekly prototyping assignments started with low fidelity prototyping to higher fidelity ones. This week we are proposed to build an interactive wireframe for a website prototype. We are giving an existing website(our very own dub website), to analyze its current content and functionality and redesign the information architecture, navigation and general layout.</p>
+
+<h2>Analysis</h2>
+
+<p><img class="right" src="/images/prototyping/a5/dub-site.png" width="300"></p>
+
+<p>After an extensive research and analysis on the current dub website (dub.washington.edu/), I got a basic understanding of all the functionality and content of this site. And synthesis with three user interviews about their experience of using this website, I have the following findings about users’ usual practice of using this site:</p>
+
+<ul>
+<li>Calendar is the most regularly used functionality for dub members, to track the newest events, specially the weekly dub seminar;</li>
+<li>For other audience who want to get to know about dub community, the people and their publications/projects are the most visited pages;</li>
+<li>The blog is less popular among visitors which may because of its lack of updates;</li>
+</ul>
+
+
+<p>According to all these findings, I think there are several main problems in terms of information architecture:</p>
+
+<!-- more -->
+
+
+<ul>
+<li>The most regularly used information(events, seminars) is located in secondary pages instead of homepage, and the upcoming event is not being highlighted.</li>
+<li>There are some huge list of names/titles of people/publication/project which makes it difficult to navigate through. A better index or search function is needed.</li>
+<li>The connections between dub people, and their publications and projects are not effectively presented.</li>
+</ul>
+
+
+<h2>Design</h2>
+
+<p>To address these problems, I redesigned the information architecture of this site while remaining most of the functionalities of the original website. Here I will introduce my new design:</p>
+
+<h3>Home Page</h3>
+
+<p>I use the masthead area to present the most important news and announcements. I envision this is a dynamic area with a wide image as background, so as to give new visitors a visualized impression of dub.</p>
+
+<p>Following the masthead, is a selected partition of the most recent blog posts and news with some thumbnails and a detailed text paragraph of introduction with a link to view the whole article. Here I wish to present all the must-know news, announcements as well as the upcoming dub seminar, so that dub members could get to know about the weekly talk directly from the home page.</p>
+
+<div class="center">
+<img src="/images/prototyping/a5/index.png" width="380"><img src="/images/prototyping/a5/drop-down-menu.png" width="380">
+</div>
+
+
+<p>The DUB logo on the top left corner is the top level menu across the whole site in the format of a hover to drop-down menu. User can use this menu as a shortcut to quickly redirect to the target resource.</p>
+
+<h3>People/Publications/Projects Page</h3>
+
+<p>The DUB people page lists all the dub members and provides a link to their own page. The current website has a huge list of names with only their department. It’s actually very annoying for new visitors to get to know about the people here. Take my experience for example, to find a professor interested in the field of data visualization, I have to press ‘command’ key and click on all the links, and then check them one by one.</p>
+
+<p>It will be much better if we can show some rudimentary information about the professor in the listing page. But the drawback of this approach is you need to scroll down the page a lot to find a specific one.</p>
+
+<p>So in my design, I try to combine both approaches where I put the name list on the left as a quick reference. And put a list of short introductions with a portrait image on the right side. In order to navigate to a certain people faster, I made the reference list a folding menu list because it’s actually a very long list referring to the current website.</p>
+
+<p><img class="center" src="/images/prototyping/a5/people-list.png" width="500"></p>
+
+<p>For the current dub site, I found these are a lot of links between the dub people, the projects and the publications. But by click on a link and jump to another page, users can’t really percept or memorize all the connections easily. They are connected but visually disconnected.</p>
+
+<p>Take into account this observation, I designed this vertical accordion page to show each person’s related publications and projects. There are three columns in this accordion page where the introduction page is unfolded by default. When the user click on the publications or the projects, the corresponding partition will unfold and the previously unfold column will be enfolded:</p>
+
+<p><img class="center" src="/images/prototyping/a5/accordion.gif" width="500"></p>
+
+<p><img src="/images/prototyping/a5/people-name.png" width="266"><img src="/images/prototyping/a5/people-publications.png" width="266"><img src="/images/prototyping/a5/people-projects.png" width="267"></p>
+
+<h3>Calendar Page</h3>
+
+<p>I personally don’t like using such calendar view to show recent events, but most dub members are already getting used to this approach and the current calendar page is actually the most visited page according to the survey. So I keep the same functionality in the new design, and put the entrance on the upper right corner of the navbar for faster accessing.</p>
+
+<h2>Prototype</h2>
+
+<p>To create such an interactive wireframe prototype, I have several different tool to choose from: using HTML/CSS or using a specification prototyping software such as Axure, Balsamiq etc. As I’m already very familiar with developing websites, I choose to learn and use Axure this time so as to learn something new.</p>
+
+<p>Building the home page in Axure is pretty easy. I made it without reading any extra documentation or tutorial. Because most elements in the homepage are very basic, and the interaction with those elements are very simple. But when I started to build the people profile page, it becomes very tricky. I searched for several implementation of accordion menu in Axure, but they are neither too expensive, nor have no documentation or any clue for you to reuse it. To work around this problem, I build three different pages and use link to simulate the accordion page, but the transition is too slow.</p>
+
+<p><img class="right" src="/images/prototyping/a5/axure.png" width="400"></p>
+
+<p>Another thing about axure is that comparing to using template in web development, it’s really hard to reuse partition of the page in other pages. I have to copy the navbar, the footer, and the navigation menu on every page. And each time I want to update a link in the menu, I have to change it on every page, which is very annoying.</p>
+
+<p>After creating this prototype in Axure, I guess I will not use Axure again. My reason is that comparing using HTML/CSS/Javascript to using Axure, the only drawback is the learning curve is relatively higher. However, for someone who is already familiar with web developing, there is no need to learn Axure. Actually with the help of countless open source components and frameworks(Bootstrap, Blueprint) from the web development community, a developer can build the prototype very quickly.</p>
+
+<p>Another reason is that for only creating the wireframe, using Axure may be easier. Nevertheless, to learn to implement some advanced interaction in Axure, it may take even more time than the HTML/CSS/Javascript approach.</p>
+
+<p>Thanks to Axure, I can publish the prototype online: <a href="http://fik3lo.axshare.com/.">http://fik3lo.axshare.com/.</a> Not all the links in this page can work due to time constraint.</p>
+
+<h2>Analysis</h2>
+
+<p>Here is some feedbacks I collected from other classmates:</p>
+
+<ul>
+<li><p>Drop down menu on the top left corner may need some improvement. There is plenty space on the top of the page for all the links, replace it using a navigation bar with link to ‘home’, ‘people’, ‘publications’, will be better.</p></li>
+<li><p>No one knows how to use the Search on the top right corner. I think it’s better to add a tooltips for the search functionality.</p></li>
+<li><p>Didn’t consider the situation where the faculty or student don’t have any publications/projects. The page will definitely change a lot or have some blank.</p></li>
+</ul>
+
+
+<p>I also created a video to introduce my design via recording people using this prototype. Most of the interaction in the video in understandable to audiences, and they can get the idea of showing the connections between people and their publications/projects through a single page accordion menu. Nevertheless, my tester got confused when he was using the prototype alone. The page redirection transition makes it harder to perceive this idea.</p>
+
+<p>Here is the video I made to present this website prototyp:</p>
+
+<div class="video-container">
+<iframe src="//player.vimeo.com/video/86963982" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-15T16:57:15-08:00" pubdate data-updated="true">Feb 15<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/hcid/'>HCID</a>, <a class='category' href='/blog/categories/prototyping-studio/'>Prototyping Studio</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Chaoyu Yang
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'hcidus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hcid.us/blog/2014/02/15/website-prototype-assignment-dub-site-redesign/';
+        var disqus_url = 'http://hcid.us/blog/2014/02/15/website-prototype-assignment-dub-site-redesign/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-45122468-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

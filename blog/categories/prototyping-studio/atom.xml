@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Prototyping Studio | Thinking in Design]]></title>
+  <title><![CDATA[Category: Prototyping Studio | Adventures in HCI+D]]></title>
   <link href="http://hcid.us/blog/categories/prototyping-studio/atom.xml" rel="self"/>
   <link href="http://hcid.us/"/>
-  <updated>2014-01-26T16:37:16-08:00</updated>
+  <updated>2014-02-17T21:36:04-08:00</updated>
   <id>http://hcid.us/</id>
   <author>
     <name><![CDATA[Chaoyu Yang]]></name>
@@ -12,6 +12,438 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Website Prototype: dub Site Redesign]]></title>
+    <link href="http://hcid.us/blog/2014/02/15/website-prototype-assignment-dub-site-redesign/"/>
+    <updated>2014-02-15T16:57:15-08:00</updated>
+    <id>http://hcid.us/blog/2014/02/15/website-prototype-assignment-dub-site-redesign</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p>Our weekly prototyping assignments started with low fidelity prototyping to higher fidelity ones. This week we are proposed to build an interactive wireframe for a website prototype. We are giving an existing website(our very own dub website), to analyze its current content and functionality and redesign the information architecture, navigation and general layout.</p>
+
+<h2>Analysis</h2>
+
+<p><img class="right" src="/images/prototyping/a5/dub-site.png" width="300"></p>
+
+<p>After an extensive research and analysis on the current dub website (dub.washington.edu/), I got a basic understanding of all the functionality and content of this site. And synthesis with three user interviews about their experience of using this website, I have the following findings about users’ usual practice of using this site:</p>
+
+<ul>
+<li>Calendar is the most regularly used functionality for dub members, to track the newest events, specially the weekly dub seminar;</li>
+<li>For other audience who want to get to know about dub community, the people and their publications/projects are the most visited pages;</li>
+<li>The blog is less popular among visitors which may because of its lack of updates;</li>
+</ul>
+
+
+<p>According to all these findings, I think there are several main problems in terms of information architecture:</p>
+
+<!-- more -->
+
+
+<ul>
+<li>The most regularly used information(events, seminars) is located in secondary pages instead of homepage, and the upcoming event is not being highlighted.</li>
+<li>There are some huge list of names/titles of people/publication/project which makes it difficult to navigate through. A better index or search function is needed.</li>
+<li>The connections between dub people, and their publications and projects are not effectively presented.</li>
+</ul>
+
+
+<h2>Design</h2>
+
+<p>To address these problems, I redesigned the information architecture of this site while remaining most of the functionalities of the original website. Here I will introduce my new design:</p>
+
+<h3>Home Page</h3>
+
+<p>I use the masthead area to present the most important news and announcements. I envision this is a dynamic area with a wide image as background, so as to give new visitors a visualized impression of dub.</p>
+
+<p>Following the masthead, is a selected partition of the most recent blog posts and news with some thumbnails and a detailed text paragraph of introduction with a link to view the whole article. Here I wish to present all the must-know news, announcements as well as the upcoming dub seminar, so that dub members could get to know about the weekly talk directly from the home page.</p>
+
+<div class="center">
+<img src="/images/prototyping/a5/index.png" width="380"><img src="/images/prototyping/a5/drop-down-menu.png" width="380">
+</div>
+
+
+<p>The DUB logo on the top left corner is the top level menu across the whole site in the format of a hover to drop-down menu. User can use this menu as a shortcut to quickly redirect to the target resource.</p>
+
+<h3>People/Publications/Projects Page</h3>
+
+<p>The DUB people page lists all the dub members and provides a link to their own page. The current website has a huge list of names with only their department. It’s actually very annoying for new visitors to get to know about the people here. Take my experience for example, to find a professor interested in the field of data visualization, I have to press ‘command’ key and click on all the links, and then check them one by one.</p>
+
+<p>It will be much better if we can show some rudimentary information about the professor in the listing page. But the drawback of this approach is you need to scroll down the page a lot to find a specific one.</p>
+
+<p>So in my design, I try to combine both approaches where I put the name list on the left as a quick reference. And put a list of short introductions with a portrait image on the right side. In order to navigate to a certain people faster, I made the reference list a folding menu list because it’s actually a very long list referring to the current website.</p>
+
+<p><img class="center" src="/images/prototyping/a5/people-list.png" width="500"></p>
+
+<p>For the current dub site, I found these are a lot of links between the dub people, the projects and the publications. But by click on a link and jump to another page, users can’t really percept or memorize all the connections easily. They are connected but visually disconnected.</p>
+
+<p>Take into account this observation, I designed this vertical accordion page to show each person’s related publications and projects. There are three columns in this accordion page where the introduction page is unfolded by default. When the user click on the publications or the projects, the corresponding partition will unfold and the previously unfold column will be enfolded:</p>
+
+<p><img class="center" src="/images/prototyping/a5/accordion.gif" width="500"></p>
+
+<p><img src="/images/prototyping/a5/people-name.png" width="266"><img src="/images/prototyping/a5/people-publications.png" width="266"><img src="/images/prototyping/a5/people-projects.png" width="267"></p>
+
+<h3>Calendar Page</h3>
+
+<p>I personally don’t like using such calendar view to show recent events, but most dub members are already getting used to this approach and the current calendar page is actually the most visited page according to the survey. So I keep the same functionality in the new design, and put the entrance on the upper right corner of the navbar for faster accessing.</p>
+
+<h2>Prototype</h2>
+
+<p>To create such an interactive wireframe prototype, I have several different tool to choose from: using HTML/CSS or using a specification prototyping software such as Axure, Balsamiq etc. As I’m already very familiar with developing websites, I choose to learn and use Axure this time so as to learn something new.</p>
+
+<p>Building the home page in Axure is pretty easy. I made it without reading any extra documentation or tutorial. Because most elements in the homepage are very basic, and the interaction with those elements are very simple. But when I started to build the people profile page, it becomes very tricky. I searched for several implementation of accordion menu in Axure, but they are neither too expensive, nor have no documentation or any clue for you to reuse it. To work around this problem, I build three different pages and use link to simulate the accordion page, but the transition is too slow.</p>
+
+<p><img class="right" src="/images/prototyping/a5/axure.png" width="400"></p>
+
+<p>Another thing about axure is that comparing to using template in web development, it’s really hard to reuse partition of the page in other pages. I have to copy the navbar, the footer, and the navigation menu on every page. And each time I want to update a link in the menu, I have to change it on every page, which is very annoying.</p>
+
+<p>After creating this prototype in Axure, I guess I will not use Axure again. My reason is that comparing using HTML/CSS/Javascript to using Axure, the only drawback is the learning curve is relatively higher. However, for someone who is already familiar with web developing, there is no need to learn Axure. Actually with the help of countless open source components and frameworks(Bootstrap, Blueprint) from the web development community, a developer can build the prototype very quickly.</p>
+
+<p>Another reason is that for only creating the wireframe, using Axure may be easier. Nevertheless, to learn to implement some advanced interaction in Axure, it may take even more time than the HTML/CSS/Javascript approach.</p>
+
+<p>Thanks to Axure, I can publish the prototype online: <a href="http://fik3lo.axshare.com/.">http://fik3lo.axshare.com/.</a> Not all the links in this page can work due to time constraint.</p>
+
+<h2>Analysis</h2>
+
+<p>Here is some feedbacks I collected from other classmates:</p>
+
+<ul>
+<li><p>Drop down menu on the top left corner may need some improvement. There is plenty space on the top of the page for all the links, replace it using a navigation bar with link to ‘home’, ‘people’, ‘publications’, will be better.</p></li>
+<li><p>No one knows how to use the Search on the top right corner. I think it’s better to add a tooltips for the search functionality.</p></li>
+<li><p>Didn’t consider the situation where the faculty or student don’t have any publications/projects. The page will definitely change a lot or have some blank.</p></li>
+</ul>
+
+
+<p>I also created a video to introduce my design via recording people using this prototype. Most of the interaction in the video in understandable to audiences, and they can get the idea of showing the connections between people and their publications/projects through a single page accordion menu. Nevertheless, my tester got confused when he was using the prototype alone. The page redirection transition makes it harder to perceive this idea.</p>
+
+<p>Here is the video I made to present this website prototyp:</p>
+
+<div class="video-container">
+<iframe src="http://hcid.us//player.vimeo.com/video/86963982" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Behavior Prototype Assignment: Speech-to-Text Dictation System]]></title>
+    <link href="http://hcid.us/blog/2014/02/08/behavior-prototype-assignment-speech-to-text-dictation-system/"/>
+    <updated>2014-02-08T13:23:00-08:00</updated>
+    <id>http://hcid.us/blog/2014/02/08/behavior-prototype-assignment-speech-to-text-dictation-system</id>
+    <content type="html"><![CDATA[<blockquote><p>This article and its related work is developed by Hadiza Ismaila, Chaoyu Yang, and Chase Chen-Hung Wu.</p></blockquote>
+
+<p>In order to learn about user’s behavior of intuitive verbal commands on speech-to-text system, we designed and implemented a rapid behavioral prototype for user testing. Built by Google Drive with a person playing the speech-to-text system (a.k.a. Wizard of Oz), our rapid prototype was tested and modified for several rounds with approaches such as simple text input, editing, error handling, and cursor moving. We summarized and organized the result into different categories of interactive patterns, and came up with valuable learnings and insights from our result analysis.</p>
+
+<div class="video-container">
+<iframe width="640" height="360" src="http://hcid.us//www.youtube.com/embed/p3B-Bi3ZO8g" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Background</h2>
+
+<p><img class="right" src="/images/prototyping/a4/draft.png" width="250"></p>
+
+<p>Our task for this assignment is to create a behavioral prototype to explore the user interaction scenario of three choices: Speech to text dictation, Home alarm system, or Gesture recognition platform. After extensive research on all three topics, our group decided to work on speech-to-text dictation system, considering it as an inspiring and challenging topic.</p>
+
+<p>The scenario for our testing is the user using speech to text dictation application that makes use of voice recognition to create and edit simple documents. This includes using spoken language to input text and using verbal command for simple text editing tasks.</p>
+
+<p>We were particularly interested in exploring the following two questions through the user testing:</p>
+
+<ul>
+<li>Expectation of verbal commands for text editing tasks</li>
+<li>Tolerance for errors during dictation.</li>
+</ul>
+
+
+<p>We expected to use low-cost, low-tech materials to build the prototype, in order to speed up our explore our testing and modification process, and also achieve the goal of answering user experience questions. The prototype should allow us to modify rapidly, which gives us the flexibility to control and compare the variable we want to observe. Last but not least, we would like to create a realistic interactive experience of our prototype, just like any user using a real dictation application during testing.</p>
+
+<h2>Prototype</h2>
+
+<p>While planning out our prototype, we came up with three approaches of building it:</p>
+
+<h4>Google Drive</h4>
+
+<p><img class="left" src="/images/prototyping/a4/prototype.png" width="300"></p>
+
+<p>The first approach is using Google Drive (Google Doc) to type down the speech manually. The user will be asked to giving verbal commands to a laptop that shows a window of Google Doc, while a VoIP application running in the background that connects our wizard. Our wizard would be one of our teammate, acting as a part of our prototype: sitting somewhere else, using VoIP to hear the user’s voice, and typing down anything he heard on the document, which will also show up on the user’s screen.</p>
+
+<p>Our concern of this prototype is that our typing speed is much slower than an actual dictation program. Plus the tooltips on the typing cursor showing the typist’s name, a user can easily tell it’s someone typing in the background.</p>
+
+<h4>Simple Web Program</h4>
+
+<p>The second approach is to build a simple web program, which allows you to prepare a paragraph of text, and pop up word by word in the testing. The tester will see the web program in an extended monitor with another operator in the other side, listening to Skype voice call, inserting words by clicking and modifying text manually.</p>
+
+<p>The problem with this prototype is that we need to ask the user to input a specific paragraph of text. And when we are modifying the text, the user can see the mouse and cursor moving, which makes it seem less realistic.</p>
+
+<h4>Google Slides</h4>
+
+<p>The third idea is using Google Slides to pop up the pre-defined paragraph word by word while the user speaking. It’s very similar to the second approach while it also allow us to do more complicated modification during the testing. However, the drawback is that it’s hard to modify anything in the middle of the testing because you can’t just create new slides in front of the user, and if you change one of the slides, it will be discontinuoud to the next ones.</p>
+
+<h4>Decision: Google Drive, &amp; Setup</h4>
+
+<p><img class="right" src="/images/prototyping/a4/decision.jpg" width="300"></p>
+
+<p>After trying out different approaches and comparing their performance, we decided to choose the Google Drive one, since it provides more flexibility for us than other designs to modify prototype in short time, which helps up explore the users’ expectation of verbal editing commands in both greater width and depth.</p>
+
+<p>Part of our prototype was connectivity, and we applied FaceTime to do so. We made FaceTime run in the background to transfer user’s sound to our wizard, while our wizard typing down words manually on Google Doc from another laptop. We were hoping this would make the prototype look like a real system or provide environment similar to a real system.</p>
+
+<p>We were attempting to convince our users that they are testing some part of a real dictating application. Below shows how we created the context:</p>
+
+<ul>
+<li>Our wizard and users were staying in different rooms, and the tester would not be (or be less) aware of typing sound by wizard.</li>
+<li>Since we were using Google Drive as a main role of our prototype, we told our user that our system is an extension of Google Drive. We readjusted the display of Google Drive, and put on an annotation, “Google Drive Dictation System / Trial”, to make user ignore the low fidelity parts of prototype.</li>
+<li>We typed down anything that the user said during the test, pretending to be a not-smart-enough system.</li>
+<li>During the test, we arranged and applied several possible mistakes made by system, in order to observe user’s error handling.</li>
+</ul>
+
+
+<h2>Testing 1</h2>
+
+<p><img class="left" src="/images/prototyping/a4/testing1.png" width="300"></p>
+
+<p>Initially, we conducted an exploratory user test on two participants. We expected to explore users’ reaction to general functions and events of a speech-to-text system: structure of users’ verbal commands, error handling behavior during dictation, and complexity of their commands (system’s perspective). Therefore our prototype had no pre-defined set of verbal commands, which gave the users flexibility to use any verbal command of their choice.</p>
+
+<p>We provided them with a short passage to dictate to the speech-to-text system. Users were also asked to perform the following tasks and to ensure that each sentence was correctly generated by the system.</p>
+
+<h4>Passage</h4>
+
+<p>The giant panda is perhaps the most powerful symbol in the world when it comes to species conservation. This peaceful, bamboo-eating member of the bear family faces a number of threats. It’s forest habitat is fragmented and populations are small and isolated from each other.</p>
+
+<h4>Task</h4>
+
+<p>All operations should be verbal commands. No other available input methods.
+* Input the first sentence
+* Input the second sentence
+* Input the third sentence
+* Replace the second sentence with Existing pandas are facing lots of threats.</p>
+
+<p>The wizard typed down the sentences while users spoke. He/she would generate predefined mistakes in the sentences, which enabled users to provide verbal commands to correct the mistakes.</p>
+
+<h2>Evaluation 1</h2>
+
+<h4>Dictation/Error Recognition</h4>
+
+<p><img class="right" src="/images/prototyping/a4/evaluation1.png" width="300"></p>
+
+<p>Since the users read from a passage on a paper, they dictated at a quite fast pace and paid more attention to the text they were reading than the text being displayed on the screen. They only noticed a mistake made by the system after they were done reading a particular sentence. They reviewed the generated text in order to find mistakes and give commands to the system to correct them.</p>
+
+<h4>Complexity of Verbal Commands</h4>
+
+<p>One interesting finding was that the use of natural language in verbal commands. Some of their commands for editing was far from trying to match operations that are normally provided by keyboard or mouse. Instead of regularized/robotic commands, they operated in phrases and complete sentences rather one word.</p>
+
+<p>Following are the examples of verbal commands they used in correcting errors made by the system:</p>
+
+<ul>
+<li>Change consolation to conservation.</li>
+<li>No, the bamboo is not pregnant. it is fragmented.</li>
+<li>Instead of stress put threats.</li>
+<li>Replace stress with threat.</li>
+<li>Correct et to eating.</li>
+<li>Add a comma after peaceful.</li>
+<li>Replace pregnant with fragmented.</li>
+<li>Delete the second sentence.</li>
+</ul>
+
+
+<h4>Same Function, Different Commands</h4>
+
+<p>Also, users used different commands for correcting same mistakes in a particular scenario. They expected the system to understand or accommodate multiple commands for the same function instead of using one specific command.</p>
+
+<h4>Improvement in Next Iteration</h4>
+
+<p>At this round we found users frequently questioning about the authenticity of the system, since the system only responded to the speech we assigned them. We couldn&rsquo;t evaluate user tolerance for error handling because the errors were few and the wizard responded to any command the user gave. Additionally, since the users were restricted to a set of instructions, the commands were only limited to changing a particular word or sentence.  The test was not sufficient enough to get meaningful answers to our questions. As a result, we refined our prototype and conducted further testing.</p>
+
+<h2>Testing 2</h2>
+
+<p><img class="left" src="/images/prototyping/a4/testing2.png" width="300"></p>
+
+<p>We found two other users for our second round of testing. We provided them with the same passage and made a few changes to the task.</p>
+
+<h4>Task</h4>
+
+<ul>
+<li>Input the first sentence</li>
+<li>Input the second sentence</li>
+<li>Input any sentence of your choice</li>
+</ul>
+
+
+<p>This time, the wizard responded to not only the input text dictated but every word the user said to make it seem more believable. Also, the wizard deliberately doesn&rsquo;t respond to some error correction commands made by the user to test what other ways the user might give commands for correcting the same mistake. We wanted to explore more commands a user would use and see if there were predictable patterns of commonly used commands.</p>
+
+<h2>Evaluation 2</h2>
+
+<p>With adding a random scenario and typing everything uttered, users were convinced that this was an authentic system.</p>
+
+<h4>Dictation/ Error Recognition</h4>
+
+<p>In this round of testing, we noticed that users paid more attention to the screen when dictating a random sentence to the computer and could easily identify errors made by the computer and make just-in-time corrections. Also, they dictated in a slower pace than they did when reading from a text.</p>
+
+<h4>Similar commands</h4>
+
+<p><img class="right" src="/images/prototyping/a4/evaluation2.png" width="300"></p>
+
+<p>We also noticed similarity of words and phrases used as voice commands for editing and correcting an error across all users.
+Commonly used phrases include:</p>
+
+<ul>
+<li>Change incorrect word to correct word</li>
+<li>Replace incorrect word to correct word</li>
+<li>Delete incorrect word and replace with correct word</li>
+<li>Correct incorrect word with correct word</li>
+</ul>
+
+
+<h4>Error Handling / Correction</h4>
+
+<p>When correction was done in real time, the user simply repeats the word until the system gets it right. If after multiple tries, the system doesn’t understand or respond to their command, they spell out the word to the system.</p>
+
+<h4>Improvement in Next Iteration</h4>
+
+<p>Although making changes made our system more authentic and enabled us to get more insights on similar commands, The results were not very different from the previous test and the commands were also still limited to the change and delete functions. We realized that giving the user predefined text to read from wasn&rsquo;t so effective and decided to perform another test without any predefined text or task.</p>
+
+<h2>Testing 3</h2>
+
+<p><img class="right" src="/images/prototyping/a4/testing3.png" width="300"></p>
+
+<p>For the final round of testing, we simply asked our user to speak any sentences that came to mind gave them the freedom to do any editing task. Here, the wizard kept generating many random and repetitive errors in order to have a better understanding of how tolerant a user can be of errors generated by the system.</p>
+
+<h2>Evaluation 3</h2>
+
+<p>By putting the user in a more flexible scenario, we got more insights on verbal commands for other functions such as moving cursors, copy and paste and navigating to a particular line.</p>
+
+<h4>Moving cursors</h4>
+
+<p>User came up with the following commands to navigate the cursor to a desired location for editing.</p>
+
+<ul>
+<li>go up &ndash; To move cursor up</li>
+<li>go down &ndash; To move cursor down</li>
+<li>go back &ndash; To move cursor left</li>
+<li>go to 4th line, delete this line</li>
+</ul>
+
+
+<h4>Cut and Paste</h4>
+
+<p>Surprisingly, the user used the cut and paste function to move a particular sentence to the end of the document. At first the user gave a complex command:</p>
+
+<blockquote><p>“Cut this line and paste it in the end of the document.”</p></blockquote>
+
+<p>But when the user realized that the system was unresponsive to her command she split the sentence in two separate command and said each command one after the other.</p>
+
+<h4>Error Handling</h4>
+
+<p>Because the system kept generating random and repetitive errors,  the user kept repeating commands for a while before the system responded to the command which frustrated them.</p>
+
+<h2>Conclusion</h2>
+
+<p>From the testing, we can deduce that the set up of our prototype the use of google doc and facetime made it effective. Learning from each test and iterating and refining our design helped us to gain valuable knowledge about users expectations of verbal commands and their tolerance for errors in a simple dictation/editing task.</p>
+
+<h4>Overall User Expectation of Verbal commands</h4>
+
+<p>Users expected to use phrases and sentences in their natural language as verbal commands for editing, and they also expected the flexibility of saying a command in multiple ways so they don’t have to learn the command. Words such as “change”, “replace”, “correct” and “delete” were commonly used across all users when changing or correcting a word.</p>
+
+<h4>Overall Tolerance for Error Handling</h4>
+
+<p>Our testing showed that users were quite tolerant of occasional mistakes as they did not expect the system to perfectly get everything right. They only became frustrated when the system repeatedly failed to understand a particular utterance or their commands.</p>
+
+<h2>Takeaway</h2>
+
+<p>The fidelity of behavioral prototype does not necessarily influence the quality of testing. User can be way more engaged into the testing scenario than we expect, if with right instructions. The point is to approach the same goal of learning with minimal effort of building prototyping, which is especially perfect for rapid modification based on result and feedback of each testing.</p>
+
+<p>Although the fidelity does not necessarily matter, a thorough plan is required for the entire process. We planned out the structure and general workflow for our prototyping and testing in advance, in order to make sure our process supported by strong base of theories and analysis. In this way, every possible modification during the iteration of prototyping and testing would all follow the major direction of our plan, which makes work faster, more precise, and easier to facilitate.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Video Prototype Assignment: Introducing Supernome App]]></title>
+    <link href="http://hcid.us/blog/2014/02/01/video-prototype-assignment-introducing-supernome-app/"/>
+    <updated>2014-02-01T22:52:58-08:00</updated>
+    <id>http://hcid.us/blog/2014/02/01/video-prototype-assignment-introducing-supernome-app</id>
+    <content type="html"><![CDATA[<div class="video-container">
+<iframe src="http://hcid.us//player.vimeo.com/video/85534963" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Model Prototype Assignment: Handheld Device]]></title>
+    <link href="http://hcid.us/blog/2014/01/25/model-prototype-assignment-handheld-device/"/>
+    <updated>2014-01-25T23:47:39-08:00</updated>
+    <id>http://hcid.us/blog/2014/01/25/model-prototype-assignment-handheld-device</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p><img class="right" src="/images/prototyping/a2/title.jpg" width="300"></p>
+
+<p>The subject for our second assignment in the prototyping studio, is creating a 3D lo-fi prototype of a handheld device with physical and digital control. We have two product to choose from: an immersion blender or a stud finder. The challenge here is to apply OXO brand and its universal design elements to a new product space. Which means the device I design should be accessible and usable for a wide range of users.</p>
+
+<p>Another challenge for me is that I have never use both equipments in my life before. So that I need to do research in the regular workflow of using these devices and study the current market of both products. After a short research, I decided to go with immersion blender because I can’t only find a blender that is accessible, so I can borrow and play with it.</p>
+
+<h2>Design</h2>
+
+<p><img class="right" src="/images/prototyping/a2/exploration.png" width="300"></p>
+
+<p>The <a href="http://www.oxo.com/">OXO</a> brand is known for applying universal design to deliver well-designed, easy to use tools for cooking and food preparation. I started with thinking about how to make a handheld blender that can work with different size of hands, and what kind of shape can achieve this goal. So I started to do some sketch like this:</p>
+
+<p>Sketching is an effective way to think with paper, but to design a physical object, it’s much better to think with our hands. So I turned to hold different objects such as water bottle, catch-up bottle, or folding umbrella, and try to use it as an immersion blender. And also by wrapping some tinfoil on the outside of those objects, I can change the shape easily and explore more opportunities within a very short period of time.</p>
+
+<p>After some exploring in different shapes and solutions, I chosed three directions to create a physical model.</p>
+
+<!-- more -->
+
+
+<h2>Model 1</h2>
+
+<p>The first model is in the shape of a drill. It have two button on the shank to operate the blender to accelerate and decelerate. I use foam to create the whole gun body as it’s extremely easy to create customized shape. The “gunpoint” and barrel is made of wire and foam. And I put some clay inside of the gun body to make it heavier so it feels like there is a real motor inside the object.</p>
+
+<p><img src="/images/prototyping/a2/model1-sketch.png" width="256"><img src="/images/prototyping/a2/model1.jpg" width="256"><img src="/images/prototyping/a2/model1.gif" width="288"></p>
+
+<h2>Model 2</h2>
+
+<p><img class="left" src="/images/prototyping/a2/catchup.png" width="170">
+I design this model based on the idea of catch-up bottle. When using a handheld blender, we always need to move the blender up and down. And it’s important to let user hold the device tightly because of the potential danger when the motor is working. I found the shape of a collapsed catch-up bottle feels good for a blender, so I make the handgrip in this shape and put the switches on the position of the thumb.</p>
+
+<p>The whole body was made of clay and wrapped it with tape. The whisk part is made of a wood stick and some foam wrapped with tinfoil.</p>
+
+<p><img src="/images/prototyping/a2/model2-sketch.png" width="277"><img src="/images/prototyping/a2/model2.jpg" width="277"><img src="/images/prototyping/a2/model2.gif" width="246"></p>
+
+<h2>Model 3</h2>
+
+<p>This model also use the catch-up bottle approach. And I made it standable with the button. You may ask why I need a blender to stand on the opposite way. The reason is that after blending some food, the whisk part will get dirty and maybe some juices were sticked to it. If you put the dirty part on the table, both table and the whisk part may become dirty. I granulated the neck part to prevent the juices flow down to the handgrip. For this model, the body is made of clay and the neck part is made of foam.</p>
+
+<p><img src="/images/prototyping/a2/model3-sketch.png" width="272"><img src="/images/prototyping/a2/model3.jpg" width="272"><img src="/images/prototyping/a2/model3.gif" width="256"></p>
+
+<h2>Test &amp; Analysis</h2>
+
+<p>Many problems are revealed during the test. For the model 1, I found it’s much harder to operate it for short people unless you put the container on a tea table. The gun shape decided that it’s easier to push down form a higher angle.</p>
+
+<p>For model 2, it’s hard to operate the switch button for people who have small hands. Ideally the user should be able to operate the blender with one hand, but with this model, people with small hands may need a second hand to change the switches.</p>
+
+<p>The design of model 3 is in cone-shape which is easy to hold for different hand size. But the problem is that in making this physical prototype, I didn’t control the size well and made it much larger than what I thought. So for people with smaller hand it’s hard to reach the control button.</p>
+
+<p>Here is an one minute clip of the usability testing with these three model prototypes:</p>
+
+<div class="video-container">
+<iframe src="http://hcid.us//player.vimeo.com/video/84949884" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+<h2>Reflection</h2>
+
+<p>When designing physical device, it’s easier to think with our hands to see what works. Even holding a simple object can help with designing the shape. And with a little effort, you can try out many different approaches in a second which help me to narrow down my choices rapidly.</p>
+
+<p>I found that Lo-fi 3d prototype provide a more concrete context for interaction designers to think about the interaction with a physical object. And it’s also a good practice to think human computer interaction in a manner of human factors and ergonomics.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Model Prototype Exercise: ecoATM]]></title>
@@ -24,90 +456,6 @@
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Paper Prototype Assignment: Wearable UIs]]></title>
-    <link href="http://hcid.us/blog/2014/01/21/paper-prototype-assignment-wearable-uis/"/>
-    <updated>2014-01-21T17:49:25-08:00</updated>
-    <id>http://hcid.us/blog/2014/01/21/paper-prototype-assignment-wearable-uis</id>
-    <content type="html"><![CDATA[<h2>Design</h2>
-
-<p><img class="right" src="/images/prototyping/a1/metronome.jpg" width="160">
-For this paper prototype assignment, I designed a metronome application that works on both mobile phone and smart watch. It helps to improve musical performance like a traditional metronome while wearable device enabled us to create an even better user experience.</p>
-
-<p>In the picture is a mechanical wind-up metronome which can produce a steady beats: “Da Da Da Da &hellip;”. The consistent tempo help internalizing a clear sense of timing and tempo while musician is playing. By adjusting the metronome, the device can produce varying tempi, usually ranging from 40 to 208 BPM(Beats Per Minutes).</p>
-
-<p>Existing software metronomes and electronic metronomes usually produce the tempo by sound. The problem with using sound is that the sound may be interruptive for audience, and it’s hard to follow the sound on stage(noisy environment).</p>
-
-<p>One thing I found most excited about using Pebble is vibrating on wrist. It enabled a new dimension of sensing information from a digital device without actively paying attention to the device. My idea is by setting the smartwatch to vibrate in a certain tempo, to give musician a more strong sense of the beats.</p>
-
-<!-- more -->
-
-
-<p><img class="left" src="/images/prototyping/a1/sketch.JPG" width="320"></p>
-
-<p>I sketched my first design on whiteboard. It uses the mobile phone interface to set the tempo, while user can also adjust the tempo directly from the watch.</p>
-
-<p>There are two ways to change the BPM value from the phone. One is by spinning the wheel in the middle of the screen, and the other one is by continuously tapping on the button to give an approximate speed. The first method is more accurate and the second one is more intuitive and more useful for composers.
-The wheel is easy to understand, it’s like a metaphor of physical tuner. But I’m not sure about the “tapping” part. So I start to make a paper prototype and test this design.</p>
-
-<h2>Prototype</h2>
-
-<p>I build the first version of this prototype within 10 minutes. It’s a quick and dirty one, with only the necessary components on one white paper. To operate this prototype, I need to change the BPM value by writing on a small sticky note and change it while the user using the prototype.</p>
-
-<p>I made a watch face and attach it to a Pebble watch so that the user can actually wear the watch and try the interactions in a more realistic setting. Once the user click start on the phone, the smart watch will launch this app which allow the user to adjust the tempo by the “up/down” button, and exit the app through the “Home” button.</p>
-
-<p><img class="left" src="/images/prototyping/a1/p1.1.jpg" width="320">
-<img src="/images/prototyping/a1/p1.2.jpg" width="320"></p>
-
-<p>As some effects can’t be implemented with paper prototype, I will just tell them what happens on the interface or the devices. That includes slight changes on the BPM number, the vibrating of the watch, the sound tempo make by the phone, and the backlight feedback for clicking the tap button.</p>
-
-<p>After several tests, I build a second version based on the feedbacks from the tests with the first paper prototype.</p>
-
-<p>With the second paper prototype, I use cardboard to create a base in the shape of an iPhone so that the user can actually hold the phone on hand. I use a scrolling bar to change the BPM value so that the feedback from tapping and wheel could be faster in the testing. And the scrolling up and down actually simulate the animation I want for this interface. While the user is adjusting the wheel, I will scroll the bar up or down according to the user’s operation. In the first time the user touch the “Tap” button, a pop-up dialog will show up to tell the user how to use this button.</p>
-
-<p><img class="left" src="/images/prototyping/a1/p2.1.JPG" width="320">
-<img src="/images/prototyping/a1/p2.2.jpg" width="320"></p>
-
-<h2>Testing &amp; Analysis</h2>
-
-<p>This is a minute clip presenting the usability testing for the 2 iterations of my paper prototype:</p>
-
-<div class="video-container">
-<iframe src="http://hcid.us//player.vimeo.com/video/84655291" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-</div>
-
-
-<p>During the tests with the first prototype, I found that the text “Try tap your tempo” on the left side is extremely helpful for the user to understand how to use it. I tried to remove it and test it with another user, and it failed in the tapping part. The user can’t understand how to use the Tap button without this simple instruction. But I also noticed that this text instruction is unnecessary after the user figure out how to use it. So I change it to a dialog format.</p>
-
-<p>On the other hand, spinning the wheel is more like a self explaining UI component, user can easily figure out how to use it. That may because it looks just like a rotary knob, and it’s natural for it to change the number above it. And this metaphor is widely used in many software interface for turning volume, adjusting parameters and also hardwares such as the classic iPod.</p>
-
-<p>I found that changing the number instantly (or faster) will largely help the user to understand the UI, and replacing the sticky notes is too time-consuming in the test. That’s why I use a scrolling bar for changing the BPM value in the improved version, as it’s just an increasing array of numbers.</p>
-
-<p>Another problem I found in the testing is that user barely use the interface on smartwatch to adjust the tempo. Most of the time they just use the mobile phone to adjust the tempo and to start/stop the beats, although most of them like the idea of vibrating on smartwatch. On a second thought, this app can totally work without the mobile phone: adjusting one number is easy enough to operate on a watch with a simple interface like the one I designed. Moreover if the smartwatch have a motion sensor and microphone, it’s possible to ask the user to set the tempo by snapping their finger which is even more fun to use.</p>
-
-<p>Beside adjusting the tempo, the phone actually allow us to do more complicate operations. For example, the user can choose a song from the music library and let the watch vibrate in a rhythmic beats, or use the phone to connect and sync the tempo among multiple smart watches, which may be useful for a band to collaborate.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Paper Prototype Exercise: Coffee Ordering Tablet App]]></title>
-    <link href="http://hcid.us/blog/2014/01/21/paper-prototype-exercise-coffee-ordering-tablet-app/"/>
-    <updated>2014-01-21T17:49:01-08:00</updated>
-    <id>http://hcid.us/blog/2014/01/21/paper-prototype-exercise-coffee-ordering-tablet-app</id>
-    <content type="html"><![CDATA[<p><img class="right" src="/images/prototyping/e1/overview.JPG" width="320"></p>
-
-<p>In the first week of our prototyping class, we explored paper prototyping through a quick exercise: to design a simple coffee ordering tablet app that allowed users to order three different types of coffee in three different sizes.</p>
-
-<p>We have to make a paper prototype of our design very quickly and then test the paper prototype with users and evaluate the design.</p>
-
-<p>We started with sketching out our ideas for the UI independently and then gathered to critique and discuss different approaches. Then we quickly build our first paper prototype, and test it with any people around that are available.</p>
-
-<p>The usability testing and the feedbacks from the users helped us to find some design flaws. After multiple iterations, we made a lot of improvements to our initial design and the final version of our prototype have much better performance in the usability testing.</p>
-
-<p><img src="/images/prototyping/e1/1.jpg" width="160"><img src="/images/prototyping/e1/2.jpg" width="160"><img src="/images/prototyping/e1/3.jpg" width="160"><img src="/images/prototyping/e1/4.jpg" width="160"><img src="/images/prototyping/e1/5.jpg" width="160"></p>
 ]]></content>
   </entry>
   
