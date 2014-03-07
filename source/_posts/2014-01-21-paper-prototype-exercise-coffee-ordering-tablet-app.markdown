@@ -3,7 +3,7 @@ layout: post
 title: "Paper Prototype Exercise: Coffee Ordering Tablet App"
 date: 2014-01-21 17:49:01 -0800
 comments: true
-categories: [Prototyping Studio]
+categories: [HCID, Prototyping Studio]
 ---
 
 

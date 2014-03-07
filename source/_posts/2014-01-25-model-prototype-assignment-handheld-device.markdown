@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Model Prototype Assignment: Handheld Device"
+title: "Model Prototype: Handheld Device"
 date: 2014-01-25 23:47:39 -0800
 comments: true
-categories: 
+categories: [HCID, Prototyping Studio]
 ---
 
 

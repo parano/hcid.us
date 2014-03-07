@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Paper Prototype Assignment: Wearable UIs"
+title: "Paper Prototype: Wearable UIs"
 date: 2014-01-21 17:49:25 -0800
 comments: true
-categories: [HCID, Prototyping Studio] 
+categories: [HCID, Prototyping Studio]
 ---
 
 Design

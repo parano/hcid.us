@@ -3,8 +3,9 @@ layout: post
 title: "Model Prototype Exercise: ecoATM"
 date: 2014-01-21 22:42:27 -0800
 comments: true
-categories: [Prototyping Studio]
+categories: [HCID, Prototyping Studio]
 ---
+
 
 
 
