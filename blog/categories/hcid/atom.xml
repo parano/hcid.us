@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HCID | Adventures in HCI+D]]></title>
   <link href="http://hcid.us/blog/categories/hcid/atom.xml" rel="self"/>
   <link href="http://hcid.us/"/>
-  <updated>2014-02-17T21:36:04-08:00</updated>
+  <updated>2014-03-06T21:10:33-08:00</updated>
   <id>http://hcid.us/</id>
   <author>
     <name><![CDATA[Chaoyu Yang]]></name>
@@ -12,6 +12,155 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Electronics Prototype: Pomoduino Timer]]></title>
+    <link href="http://hcid.us/blog/2014/03/03/electronics-prototype-pomoduino-timer/"/>
+    <updated>2014-03-03T14:10:25-08:00</updated>
+    <id>http://hcid.us/blog/2014/03/03/electronics-prototype-pomoduino-timer</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p><img class="right" src="/images/prototyping/a7/clock.jpg" width="230"></p>
+
+<p>Building interactive physical systems is a great joy to me. It’s always fun to design the circuits, solder different parts and make things work. This week, our prototyping studio class gives me a chance to build an electronics prototype with Arduino.</p>
+
+<p>As there is only one week for me to do this assignment, I decide to make something useful to me and also small enough so that I can handle it in one week. Looking at my dumped alarm clock, I decide to build a Pomodoro Timer out of it.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a> is a popular time management method. Based on the idea that frequent breaks can improves mental agility, this method breaks down the work into intervals, 25 minutes in length, and separated by short breaks.</p>
+
+<p>To apply Pomodoro Technique in real life, people invented the Pomodoro Timer which is similar to a kitchen timer, but can only time 25 minutes every time. The physical act of winding up the timer confirms the user’s determination to start a task, the ticking to externalises desire to complete the task, and the ringing announces a break.</p>
+
+<p>For this prototyping exercise, I made a pomodoro timer mainly with an Arduino UNO board, a LCD screen, and a motor.  The LCD screen is used to visualize the ticking and how much time left in the running pomodori. The button is the only way to interact with the system which can toggle the status between running and reseted.</p>
+
+<!-- more -->
+
+
+<p>Here is a demo video of the pomodoro timer I made, which I call it <em>pomoduino</em>:</p>
+
+<div class="video-container">
+<iframe src="http://hcid.us//player.vimeo.com/video/88049469" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+
+
+<hr>
+
+
+<h2>Playing With Electronics And Arduino</h2>
+
+<h4>Motor Module</h4>
+
+<p><img src="/images/prototyping/a7/motor1.jpg" width="400"><img src="/images/prototyping/a7/motor2.jpg" width="400"></p>
+
+<p>The motor module is used to power the bell in the alarm clock. I firstly prepare and test the circuits with an extra motor and migrate it to the motor inside the clock in the end.</p>
+
+<p>The transistor acts like a switch to control the motor; it make use of the signal from Arduino to power another circuit which much higher current. The diode and capacitor in this circuit are meant to protect the circuit from noise and spikes.</p>
+
+<h4>LCD Screen Module</h4>
+
+<p><img src="/images/prototyping/a7/screen1.jpg" width="400"><img src="/images/prototyping/a7/screen2.jpg" width="400"></p>
+
+<p>The 16 pins LCD screen is widely used with single-chip microcomputers. With arduino, the library and driver for controlling this LCD is actually pre-installed in the Arduino IDE. The challenge here is to neatly layout all these wires and present a clear interface to the user. I bundled all the wires to go through the hole in the center of the clockface, and stick the small breadboard on the surface.</p>
+
+<h4>Button Module</h4>
+
+<p><img class="right" src="/images/prototyping/a7/button.jpg" width="300"></p>
+
+<p>The button here actually works like a switch that can change the state of the system. The system have to keep track on the current and previous value of the button, and only change the state of the system when its value change from LOW to HIGH. That means the state of the system will only be changed when the user push down the button. A tutorial on this could be found <a href="http://www.arduino.cc/en/Tutorial/Switch#.UxegtPRdXHA">here</a>.</p>
+
+<h4>Putting Everything Together</h4>
+
+<p>After testing each part, I start to assemble different parts of the hardware together. This is the overall layout of the circuits:</p>
+
+<p><img src="/images/prototyping/a7/circuits.jpg"></p>
+
+<p>I apply a 9 volts battery to power both the arduino and the motor. The input-output interface(button, LCD screen and a breadboard) is separate from the others, and is positioned in the front of the ‘clock’. Another breadboard is attached to the arduino board, together in the back of the ‘clock’, and used to arrange the motor circuits. I removed the original wires that connected to the motor inside the clock, and soldered another two that is easier to connect to the breadboard.</p>
+
+<p><img src="/images/prototyping/a7/alltogether.jpg" width="400"><img src="/images/prototyping/a7/back.jpg" width="400"></p>
+
+<h2>Reflections</h2>
+
+<h4>Constraints Of Prototyping</h4>
+
+<p>During prototyping electronics, the components we have are usually not ideally to our design. In this project for example, I want to present ‘push button to start’ on the LCD screen. But the LCD is not long enough to contain this sentence so that I change it to a less appropriate one: ‘click to start’.</p>
+
+<p>I recognized that there are always lot of constraints in prototyping electronics, because we can’t get all the hardware parts customized to our need. But most of them it doesn’t matter to the prototype itself, as long as we can continue the following usability testing upon the prototype. Some walkaround could help to build the initial prototype.</p>
+
+<h4>Software Engineering Principles</h4>
+
+<p>Building and debugging hardware seems very challenge to me in the beginning. Until I find that I can actually apply my knowledge in developing software to building electronics. The principle of Modular Programming, Encapsulation and API design are also quite useful in building hardware. For example, if I haven’t divided the circuits into separate modules in the beginning, it would take much more effort to deal with all those wires, and also much harder to debug potential issues in hardware or software.</p>
+
+<h4>Be Safe &amp; Follow Best Practice</h4>
+
+<p>Playing with electronics is not safe especially when high current circuits are involved in your project. Even with only 9 or 5 volts battery, it’s really easy to break some components in the circuits. We can’t expect every prototyper to be an expert in digital design and create appropriate protect circuits. But as a prototyper, it is important to follow the best practice from all those tutorials and examples, so as to avoid those dangers.</p>
+
+<h4>Fast Prototyping with Arduino</h4>
+
+<p>Building prototypes with Arduino is so fast. There is a huge and active online community that contributes to millions of libraries and tutorials. You can easily get start with any type of sensor or components, by just following the tutorials, and use related libraries. The processing language also allow the user to integrate their application with other programming language or applications. I think this is the reason that Arduino is a good choice for prototyping electronics. The less effort you spend on technical problems, the more time you could focus on solving the real problem.</p>
+
+<p><img src="/images/prototyping/a7/books.jpg" title="center" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Prototype: Tweak The Tweet]]></title>
+    <link href="http://hcid.us/blog/2014/02/28/mobile-prototype-tweak-the-tweet/"/>
+    <updated>2014-02-28T11:30:05-08:00</updated>
+    <id>http://hcid.us/blog/2014/02/28/mobile-prototype-tweak-the-tweet</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p><img class="right" src="/images/prototyping/a6/designspecification.jpg" width="230"></p>
+
+<p>This week, our HCID 520 prototyping class is ready to extend our prototyping skills to building mobile applications. Our task is to build a working prototype of the TtT(<a href="http://faculty.washington.edu/kstarbi/tweak-the-tweet.html">Tweak The Tweet</a>) mobile app, to support future usability study.</p>
+
+<p>TtT is an application that is part of HCDE Professor <a href="http://faculty.washington.edu/kstarbi/">Kate Starbird</a>’s work in crisis research. She studies the “use of social media during crisis events, specifically looking at how the converging audience (aka, the ‘crowd’) can contribute—and is already contributing—to crisis response efforts.“</p>
+
+<p>TtT uses Twitter to gather and direct information during crises to people who can act on it to the benefit of affected people and communities. And TtT aims to allow digital volunteers to provide information in a form that is more easily and reliably processed and analyzed.</p>
+
+<p>We are given the design specification of this application that written by Grace Jang. It includes all the user interfaces, interactions and functional requirements of this app. And the prototype is suppose to be consistent with the specification.</p>
+
+<!-- more -->
+
+
+<p>Here is a short video demo about this mobile prototype I developed:</p>
+
+<div class="video-container">
+<iframe src="http://hcid.us//player.vimeo.com/video/87334846" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
+
+
+<h2>Prototyping</h2>
+
+<p><img class="left" src="/images/prototyping/a6/phonegap.jpg" width="270"></p>
+
+<p>There are lots of tools for prototyping high fidelity mobile applications. Considering the scale of this application, non-programming approaches, such as App Inventor or Axure, might be very hard to manage and even harder to adapt to change in future works. So I choose PhoneGap(also known as Apache Cordova) and web technology to build this prototype since I am already very familiar with web programming.</p>
+
+<p>PhoneGap is a mobile development framework that allows software engineers to build application for mobile devices using web technologies(JavaScript, HTML5, CSS3). It use a middle layer that contains a webview inside a native app to render the UIs, and integrate many system service and apis into corresponding JavaScript functions.</p>
+
+<p>Taking advantage of using web, I can create highly customized user interface using HTML and CSS. And thanks to jQuery Mobile and Bootstrap, creating the UIs defined in the specification is not hard at all. Here is some screenshot of the UIs I made using web:</p>
+
+<p><img src="/images/prototyping/a6/1.jpg" width="266"><img src="/images/prototyping/a6/2.jpg" width="266"><img src="/images/prototyping/a6/3.jpg" width="266"></p>
+
+<p><img src="/images/prototyping/a6/4.jpg" width="266"><img src="/images/prototyping/a6/5.jpg" width="266"><img src="/images/prototyping/a6/6.jpg" width="266"></p>
+
+<p><img src="/images/prototyping/a6/7.jpg" width="266"><img src="/images/prototyping/a6/8.jpg" width="266"><img src="/images/prototyping/a6/9.jpg" width="266"></p>
+
+<p>I started with build a mobile web application: using a local HTTP server to host the application and do testing in the browser. PhoneGap also provides a toolkit for developers to create all the files you need to pack up the web app into a native app installer. This allow me to use XCode to load the project folder generated from PhoneGap, and install this application on an iOS emulator.</p>
+
+<p><img src="/images/prototyping/a6/vim.jpg" width="400"><img src="/images/prototyping/a6/xcode.jpg" width="400"></p>
+
+<h2>Reflection</h2>
+
+<p><img class="right" src="/images/prototyping/a6/login.jpg" width="230"></p>
+
+<p>One thing confused me a lot in the beginning is the authentication page in the design specification. It defined a customized login page for twitter and suppose that page can be implemented. But in fact, this kind of customized login page only exist before Twitter canceled their support for <code>HTTP Basic Auth</code> due to security reason. Nowadays twitter only support <code>OAuth</code> for authentication, which means the mobile app will redirect to a web page provided by twitter and not allowed to store the users’ password.</p>
+
+<p>It’s possible that the author of this design specification didn’t discuss its design with a developer in detail. So that he or she can not really recognize all the constraints in designing this application. Moreover, since this app only need twitter authentication to post a tweet, it’s more appropriate to use <a href="https://dev.twitter.com/docs/ios/using-tweet-sheet">Twitter Sheet</a> or for PhoneGap, the <a href="https://dev.twitter.com/docs/intents">Web Intents</a>. Because in that case, the application itself don’t need to worry about the authentication.</p>
+
+<p>In general, I think prototyping TtT app using the web is a good choice. Comparing to developing native application, developing a mobile web application is arguably cheaper and faster, which is exactly what we expect from a prototyping tool. Although there are some constraints of building mobile app using web, including offline functioning, system level features, and UI responding speed, but the TtT app doesn’t require any offline feature or system level apis. Also for prototyping, the speed of webview is totally acceptable.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Website Prototype: dub Site Redesign]]></title>
@@ -22,7 +171,7 @@
 
 <p>Our weekly prototyping assignments started with low fidelity prototyping to higher fidelity ones. This week we are proposed to build an interactive wireframe for a website prototype. We are giving an existing website(our very own dub website), to analyze its current content and functionality and redesign the information architecture, navigation and general layout.</p>
 
-<h2>Analysis</h2>
+<h2>Design</h2>
 
 <p><img class="right" src="/images/prototyping/a5/dub-site.png" width="300"></p>
 
@@ -47,7 +196,7 @@
 </ul>
 
 
-<h2>Design</h2>
+<h2>Prototyping Process</h2>
 
 <p>To address these problems, I redesigned the information architecture of this site while remaining most of the functionalities of the original website. Here I will introduce my new design:</p>
 
@@ -86,7 +235,7 @@
 
 <p>I personally don’t like using such calendar view to show recent events, but most dub members are already getting used to this approach and the current calendar page is actually the most visited page according to the survey. So I keep the same functionality in the new design, and put the entrance on the upper right corner of the navbar for faster accessing.</p>
 
-<h2>Prototype</h2>
+<h2>Prototyping Tools</h2>
 
 <p>To create such an interactive wireframe prototype, I have several different tool to choose from: using HTML/CSS or using a specification prototyping software such as Axure, Balsamiq etc. As I’m already very familiar with developing websites, I choose to learn and use Axure this time so as to learn something new.</p>
 
@@ -102,7 +251,7 @@
 
 <p>Thanks to Axure, I can publish the prototype online: <a href="http://fik3lo.axshare.com/.">http://fik3lo.axshare.com/.</a> Not all the links in this page can work due to time constraint.</p>
 
-<h2>Analysis</h2>
+<h2>Reflection</h2>
 
 <p>Here is some feedbacks I collected from other classmates:</p>
 
@@ -127,7 +276,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Behavior Prototype Assignment: Speech-to-Text Dictation System]]></title>
+    <title type="html"><![CDATA[Behavior Prototype: Speech-to-Text Dictation System]]></title>
     <link href="http://hcid.us/blog/2014/02/08/behavior-prototype-assignment-speech-to-text-dictation-system/"/>
     <updated>2014-02-08T13:23:00-08:00</updated>
     <id>http://hcid.us/blog/2014/02/08/behavior-prototype-assignment-speech-to-text-dictation-system</id>
@@ -362,96 +511,12 @@ Commonly used phrases include:</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Video Prototype Assignment: Introducing Supernome App]]></title>
+    <title type="html"><![CDATA[Video Prototype: Introducing Supernome App]]></title>
     <link href="http://hcid.us/blog/2014/02/01/video-prototype-assignment-introducing-supernome-app/"/>
     <updated>2014-02-01T22:52:58-08:00</updated>
     <id>http://hcid.us/blog/2014/02/01/video-prototype-assignment-introducing-supernome-app</id>
     <content type="html"><![CDATA[<div class="video-container">
 <iframe src="http://hcid.us//player.vimeo.com/video/85534963" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-</div>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Model Prototype Assignment: Handheld Device]]></title>
-    <link href="http://hcid.us/blog/2014/01/25/model-prototype-assignment-handheld-device/"/>
-    <updated>2014-01-25T23:47:39-08:00</updated>
-    <id>http://hcid.us/blog/2014/01/25/model-prototype-assignment-handheld-device</id>
-    <content type="html"><![CDATA[<h2>Background</h2>
-
-<p><img class="right" src="/images/prototyping/a2/title.jpg" width="300"></p>
-
-<p>The subject for our second assignment in the prototyping studio, is creating a 3D lo-fi prototype of a handheld device with physical and digital control. We have two product to choose from: an immersion blender or a stud finder. The challenge here is to apply OXO brand and its universal design elements to a new product space. Which means the device I design should be accessible and usable for a wide range of users.</p>
-
-<p>Another challenge for me is that I have never use both equipments in my life before. So that I need to do research in the regular workflow of using these devices and study the current market of both products. After a short research, I decided to go with immersion blender because I can’t only find a blender that is accessible, so I can borrow and play with it.</p>
-
-<h2>Design</h2>
-
-<p><img class="right" src="/images/prototyping/a2/exploration.png" width="300"></p>
-
-<p>The <a href="http://www.oxo.com/">OXO</a> brand is known for applying universal design to deliver well-designed, easy to use tools for cooking and food preparation. I started with thinking about how to make a handheld blender that can work with different size of hands, and what kind of shape can achieve this goal. So I started to do some sketch like this:</p>
-
-<p>Sketching is an effective way to think with paper, but to design a physical object, it’s much better to think with our hands. So I turned to hold different objects such as water bottle, catch-up bottle, or folding umbrella, and try to use it as an immersion blender. And also by wrapping some tinfoil on the outside of those objects, I can change the shape easily and explore more opportunities within a very short period of time.</p>
-
-<p>After some exploring in different shapes and solutions, I chosed three directions to create a physical model.</p>
-
-<!-- more -->
-
-
-<h2>Model 1</h2>
-
-<p>The first model is in the shape of a drill. It have two button on the shank to operate the blender to accelerate and decelerate. I use foam to create the whole gun body as it’s extremely easy to create customized shape. The “gunpoint” and barrel is made of wire and foam. And I put some clay inside of the gun body to make it heavier so it feels like there is a real motor inside the object.</p>
-
-<p><img src="/images/prototyping/a2/model1-sketch.png" width="256"><img src="/images/prototyping/a2/model1.jpg" width="256"><img src="/images/prototyping/a2/model1.gif" width="288"></p>
-
-<h2>Model 2</h2>
-
-<p><img class="left" src="/images/prototyping/a2/catchup.png" width="170">
-I design this model based on the idea of catch-up bottle. When using a handheld blender, we always need to move the blender up and down. And it’s important to let user hold the device tightly because of the potential danger when the motor is working. I found the shape of a collapsed catch-up bottle feels good for a blender, so I make the handgrip in this shape and put the switches on the position of the thumb.</p>
-
-<p>The whole body was made of clay and wrapped it with tape. The whisk part is made of a wood stick and some foam wrapped with tinfoil.</p>
-
-<p><img src="/images/prototyping/a2/model2-sketch.png" width="277"><img src="/images/prototyping/a2/model2.jpg" width="277"><img src="/images/prototyping/a2/model2.gif" width="246"></p>
-
-<h2>Model 3</h2>
-
-<p>This model also use the catch-up bottle approach. And I made it standable with the button. You may ask why I need a blender to stand on the opposite way. The reason is that after blending some food, the whisk part will get dirty and maybe some juices were sticked to it. If you put the dirty part on the table, both table and the whisk part may become dirty. I granulated the neck part to prevent the juices flow down to the handgrip. For this model, the body is made of clay and the neck part is made of foam.</p>
-
-<p><img src="/images/prototyping/a2/model3-sketch.png" width="272"><img src="/images/prototyping/a2/model3.jpg" width="272"><img src="/images/prototyping/a2/model3.gif" width="256"></p>
-
-<h2>Test &amp; Analysis</h2>
-
-<p>Many problems are revealed during the test. For the model 1, I found it’s much harder to operate it for short people unless you put the container on a tea table. The gun shape decided that it’s easier to push down form a higher angle.</p>
-
-<p>For model 2, it’s hard to operate the switch button for people who have small hands. Ideally the user should be able to operate the blender with one hand, but with this model, people with small hands may need a second hand to change the switches.</p>
-
-<p>The design of model 3 is in cone-shape which is easy to hold for different hand size. But the problem is that in making this physical prototype, I didn’t control the size well and made it much larger than what I thought. So for people with smaller hand it’s hard to reach the control button.</p>
-
-<p>Here is an one minute clip of the usability testing with these three model prototypes:</p>
-
-<div class="video-container">
-<iframe src="http://hcid.us//player.vimeo.com/video/84949884" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-</div>
-
-
-<h2>Reflection</h2>
-
-<p>When designing physical device, it’s easier to think with our hands to see what works. Even holding a simple object can help with designing the shape. And with a little effort, you can try out many different approaches in a second which help me to narrow down my choices rapidly.</p>
-
-<p>I found that Lo-fi 3d prototype provide a more concrete context for interaction designers to think about the interaction with a physical object. And it’s also a good practice to think human computer interaction in a manner of human factors and ergonomics.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Model Prototype Exercise: ecoATM]]></title>
-    <link href="http://hcid.us/blog/2014/01/21/model-prototype-exercise-ecoatm/"/>
-    <updated>2014-01-21T22:42:27-08:00</updated>
-    <id>http://hcid.us/blog/2014/01/21/model-prototype-exercise-ecoatm</id>
-    <content type="html"><![CDATA[<div class="video-container">
-<iframe src="http://hcid.us//player.vimeo.com/video/84655899" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
 
 
