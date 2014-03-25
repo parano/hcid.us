@@ -1,0 +1,293 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NecX: Wearable Game Controller for Neck Exercising - Adventures in HCI+D</title>
+	<meta name="author" content="Chaoyu Yang">
+
+	
+	<meta name="description" content="This article and its related work is developed by Aniket Handa, and Chaoyu Yang. Summary About a third of U.S. adults deal with neck and back &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Adventures in HCI+D" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Adventures in HCI+D</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/about">About</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/about">About</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:hcid.us">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/paranoyang" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/parano" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:hcid.us">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">NecX: Wearable Game Controller for Neck Exercising</h2>
+	<div class="entry-content"><blockquote><p>This article and its related work is developed by <a href="http://aniket.io">Aniket Handa</a>, and Chaoyu Yang.</p></blockquote>
+
+<h2>Summary</h2>
+
+<p><img class="right" src="/images/prototyping/fp/cover.jpg" width="240"></p>
+
+<p>About a third of U.S. adults deal with neck and back problems. Here we seek to design a solution, which makes neck exercising fun. For this we use two prototyping techniques to quickly answer some questions regarding the design of the solution. We then user test the solution with two participants. The testing gave us interesting insights to “what works?” and “what might not work?” This helped us to scope down the problem and design a simple game-controlling interface that can be used with variety of games. Finally, the report outlines our analysis of the whole process.</p>
+
+<h2>Problem</h2>
+
+<p>According to recent survey, around 31% of U.S. adults have some sort of neck or back condition that causes them pain.  This condition gets worst with age.  Neck and back problems are highly correlated. Exercising the neck need more repetitions, and can easily become boring, the major reason it is neglected by majority of people. It also depends highly on lifestyle. The cubicle job has only promoted such problems. It is fascinating that there is no game targeted towards making exercise neck fun (As per our brief survey), not even using Microsoft Kinect. Here we present our problem questions, which are prototypes were suppose to answer.</p>
+
+<h2>Design Question</h2>
+
+<p><em>“How can we provide an environment which makes neck exercising fun?</em></p>
+
+<p>Specific Questions</p>
+
+<ul>
+<li><p>Behavioural prototype:</p>
+
+<ul>
+<li><em>“What is the best way to interact with this type of system?”</em></li>
+<li><em>“What level of accuracy will be the base line?”</em></li>
+</ul>
+</li>
+<li><p>Hardware Prototype:</p>
+
+<ul>
+<li><em>“Is it technically feasible?&ldquo;</em></li>
+<li><em>&ldquo; How will be the final experience like?”</em></li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Prototypes</h2>
+
+<h3>Behaviour Prototype</h3>
+
+<p>In order to learn about user’s behavior of intuitive commands via neck movement, we created a rapid behavior prototype for user testing. We first listed down the neck exercises that we need the user to perform. The picture below shows some neck movements which are good for exercising.</p>
+
+<p><img src="/images/prototyping/fp/exercise.png">
+<em>Neck Movements. From left to right: Users Right, Down, Up, Users Left, Spin.</em></p>
+
+<!-- more -->
+
+
+<p>Next step was to map these basic exercises, or one might say neck gestures, to actions/tasks which are needed to interact with an immersive game. We mapped these to Top, Down, Right, Left ( As in to replace Arrow Keys in a typical keyboard). The Spin was mapped to the Return key.</p>
+
+<p>Now, the next challenge was to find one or more games which are engaging and require low bandwidth. ‘Low bandwidth’ because we knew the precision of detecting neck gestures might not be that perfect, and we might only be able to capture certain movements confidently. We shortlisted to games as shown in picture. From the world famous nostalgia Mario Bros., recently famous Flappy bird and 2048, to which the whole programming community is currently hooked. The game play of all these games is fairly simple; they all require 4 key inputs or less.</p>
+
+<p><img src="/images/prototyping/fp/mario.png" width="266"><img src="/images/prototyping/fp/2048.png" width="266"><img src="/images/prototyping/fp/bird.png" width="266"></p>
+
+<p><em>Basic yet famous games that we used to behaviour prototype. From, Left to Right: 2048, Mario Bros, Flappy Bird.</em></p>
+
+<p>We came up with quite a few gesture sets and games as said before that  could possibly map to one or more games. To choose one, we went on to Behaviour prototype all sets of gesture inputs. This gave us valuable findings and insights into advantages and disadvantages of each set of neck gestures. Now for the running the prototype, we first discussed about setting up the system, which allowed quick iterations and modifications on the fly. We used an external Keyboard to input commands as the user performed the gestures from the given set. We also took latency into consideration, for which we triggered the input with a small delay to account for technical latency and give more real-like experience. This Wizard of Oz technique, worked quite well highlighting problems.</p>
+
+<h3>Electronics Prototype</h3>
+
+<p>The behavior prototyping gave us clear foundation to take the process to higher fidelity. We choose to technically prototype it using an Arduino Do-It-Yourself development kit. This way we not only make a prove of concept and technically prove it, but also give an almost end-product like experience. It is a great way to run evaluation, as we get more applicable feedback and analysis.</p>
+
+<p>To develop this prototype we also used a 3-axis Accelerometer sensor to track acceleration in all three axises. The accelerometer sat in wearable head mounted cap, in which it was embedded. We also used a 9V battery pack to power the Arduino board and two X-bees to make the system portable. X-bees uses serial communication to transfer data to other X-Bees wirelessly in the same network. One X-bee was attached to the computer running Processing and the other X-Bee was attached to the RX &amp; TX of the Arduino board for transmitting the sensor data and receiving some commands respectively.</p>
+
+<p>The received data is used to detect gestures using Processing. The gravity plays a major part is helping us differentiate the acceleration signal. Once we detect a gesture a system command is issued for a System Event regarding a key pressed. All four gestures generate their respective system event.</p>
+
+<p><img src="/images/prototyping/fp/prototyping1.jpg"></p>
+
+<p>The Processing not only just issues system events it also generates sound upon a successful gesture. This is important for feedback. The sound confirms the event been taken place, and prevents the user from performing the gesture again.</p>
+
+<p>Also, for better recognition of gestures we added a feature to calibrate the sensing. This enabled custom thresholds for each gesture. To calibrate, a user just have to move the to the position and press either ‘W’,’A’,’S’ or ’D’ keystroke depending upon the gesture. Though, it comes with a default setting that works in most cases.</p>
+
+<p><img src="/images/prototyping/fp/prototyping2.jpg">
+<em>The Arduino Board, with X-Bees and Accelerometer sensor on a separate breadboard.</em></p>
+
+<h2>User Testing</h2>
+
+<h3>Testing Behavior Prototype</h3>
+
+<p>Initially, we conducted an exploratory user testing with two participants. We expected to explore the interaction between neck movement and a computer game: what kind of neck gestures are needed for exercise? which of them are proper for an immersive game?. We have predefined a set of neck gestures and apply them to three different computer games.</p>
+
+<p>We provided them with a laptop computer with a game initiated and the related instructions for that game. Then the user will start playing the game via neck gestures. Because the performance of the game is actually not the most important feature, so we didn’t give the user any specific task such as finishing a level in the game. Instead we are more interested in whether such an environment is fun and engaging for the user. Therefore, we ask them to just play with the game and enjoy it, and we will evaluate how much they like playing the game, and whether it is a significant neck exercise.</p>
+
+<h3>Evaluating Behavior Prototype</h3>
+
+<h4>Type of Game</h4>
+
+<p>We found that not all games are appropriate for controlled using neck movement. Games like Flappy Bird have a really fast tempo, and need constant input to control the game which really intimidates the user. Because when they are doing a neck movement, their field of vision will be temporarily moved to the outside of the screen, and if they want to continually focus on the game, they have to do the gesture very fast. But moving neck fast is actually not good for exercise purpose and also have potential danger of injuring the neck.</p>
+
+<h4>Choice of Interaction</h4>
+
+<p>An interesting finding is that our neck and head are physically working like a joystick, which provides us a perfect mapping of game controller. One thing we confused about is the mapping of left-right arrow key. Some people think shaking head are more intuitive while others think swinging is better. We found technically it’s really hard to figure out to which direction the command is when user shaking their head, so we choose swinging and start building our electronic prototype.</p>
+
+<p><img src="/images/prototyping/fp/usertest.jpg"></p>
+
+<h3>Testing Electronic Prototype</h3>
+
+<p>After building up the electronic prototype, we integrated it with the OS X system and allow it to send command keys to three different games. The same as we did with the behavior prototype, we asked the user to wear the hat with the sensor, introduce all the rules and purpose of this system, and then allow them to play with three different games.</p>
+
+<h3>Evaluating Electronic Prototype</h3>
+
+<h4>Tolerance of Misinterpretation</h4>
+
+<p>Although we tried many method for improving the accuracy of gesture recognizing, in the best case, the system can achieve around 90% precision at recognizing the users’ gesture. We found for the game 2048, occasionally random keystrokes are acceptable for gamers, which actually bring more fun to this game. But for games like Super Mario and Flappy Bird, users need more accuracy in terms of input, because it’s intense and need meticulous controller.</p>
+
+<h4>Wireless Or Not?</h4>
+
+<p>We build our first electronic prototype with XBees to make it wireless with the intention that people may wear a hat and play the game wirelessly. Although it might be a good idea to make it wireless for end product, we eventually remove XBees and test it with a wired version of our prototype. The main reason is that XBees have relatively less community support and for some reason, it continually stop working which we can’t event debug to find where is the problem. The other reason is that for exploring the gaming environment and testing the interactions, it really doesn’t matter if it’s wireless or not. A longer wire can simulate ‘wireless’, and it also makes the prototype much simpler.</p>
+
+<p><img src="/images/prototyping/fp/studio.jpg"></p>
+
+<h2>Synthesis</h2>
+
+<p>We felt that our behavior prototype was successful in providing a “quick and dirty” way to test different gesture sets that we developed. We learned a lot not only about the user’s gesture preferences, but also about the level of accuracy that the gesture recognition technology would need to account for. After that, we did an electronic prototype to provide a proof of concept and also to prove its feasibility. The user testing helped us focus by eliminating features/other solutions and reach a conclusive solution to the problem. If we were to do it all over again, we would also do a heuristic evaluation of the interface.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-19T13:09:12-07:00" pubdate data-updated="true">Mar 19<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/hcid/'>HCID</a>, <a class='category' href='/blog/categories/prototyping-studio/'>Prototyping Studio</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Chaoyu Yang
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'hcidus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://hcid.us/blog/2014/03/19/necx/';
+        var disqus_url = 'http://hcid.us/blog/2014/03/19/necx/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-45122468-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>
