@@ -18,13 +18,13 @@ TtT uses Twitter to gather and direct information during crises to people who ca
 
 We are given the design specification of this application that written by Grace Jang. It includes all the user interfaces, interactions and functional requirements of this app. And the prototype is suppose to be consistent with the specification. 
 
-<!-- more -->
-
 Here is a short video demo about this mobile prototype I developed:
 
 <div class="video-container">
 <iframe src="//player.vimeo.com/video/87334846" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 </div>
+
+<!-- more -->
 
 ##Prototyping
 
